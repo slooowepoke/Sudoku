@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/info_layout"
+        android:background="@color/edit_color"
+        android:layout_width="0dp"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/checkButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="checkClicked"
+            android:textColor="@color/text_color"
+            android:background="@color/menu_button"
+            android:fontFamily="serif"
+            android:text="@string/check_button" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/field_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:background="@color/divider_color">
+
+
+    </TableLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/edit_layout"
+        android:background="@color/edit_color"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:weightSum="1"
+        android:layout_weight="0.1"
+        android:layout_width="0dp">
+
+        <Button
+            android:id="@+id/edt_button"
+            android:layout_width="match_parent"
+            android:onClick="editClicked"
+            android:background="@drawable/edit_icon"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0.15"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/del_button"
+            android:layout_width="match_parent"
+            android:layout_weight="0.15"
+            android:background="@drawable/del_arrow"
+            android:layout_marginTop="5dp"
+            android:onClick="eraseClicked"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="0dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/numeric_layout"
+        android:background="@color/number_color"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="0.1"
+        android:weightSum="0.9"
+        android:layout_width="0dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:onClick="numClicked"
+            android:text="@string/_1" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:onClick="numClicked"
+            android:text="@string/_2" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:onClick="numClicked"
+            android:text="@string/_3" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:onClick="numClicked"
+            android:text="@string/_4" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:onClick="numClicked"
+            android:text="@string/_5" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:onClick="numClicked"
+            android:text="@string/_6" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:onClick="numClicked"
+            android:text="@string/_7" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:onClick="numClicked"
+            android:text="@string/_8" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:onClick="numClicked"
+            android:text="@string/_9" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#353538</color>
+    <color name="colorPrimaryDark">#131415</color>
+    <color name="colorAccent">#004cff</color>
+    <color name="field_color">#d0d0d0</color>
+    <color name="divider_color">#9a9a9a</color>
+    <color name="menuText_color">#ffffff</color>
+    <color name="text_color">#0a1dad</color>
+    <color name="edit_color">#9a9a9a</color>
+    <color name="number_color">#c3c3c3</color>
+    <color name="cell_color">#d6d6d6</color>
+    <color name="activated">#76a9df</color>
+    <color name="menu_background">#d0d0d0</color>
+    <color name="menu_button_background">#b2b2b2</color>
+    <color name="menu_button">#96bfd2</color>
+    <color name="editing">#b1d7ff</color>\
+    <color name="initial">#000000</color>
+</resources>

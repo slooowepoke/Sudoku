@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Sudoku</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="start">Start</string>
+    <string name="options">Options</string>
+    <string name="help">Rules</string>
+    <string name="about">About</string>
+    <string name="rules_message">
+        A standard Sudoku puzzle consists of a grid of 9 blocks. Each block contains 9 boxes arranged in 3 rows and 3 columns.\n
+        There is only one valid solution to each Sudoku puzzle.
+        The only way the puzzle can be considered solved correctly is when all 81 boxes contain numbers and the other Sudoku rules have been followed.\n
+        When you start a game of Sudoku, some blocks will be pre-filled for you. You cannot change these numbers in the course of the game.\n
+        Each column must contain all of the numbers 1 through 9 and no two numbers in the same column of a Sudoku puzzle can be the same.\n
+        Each row must contain all of the numbers 1 through 9 and no two numbers in the same row of a Sudoku puzzle can be the same.\n
+        Each block must contain all of the numbers 1 through 9 and no two numbers in the same block of a Sudoku puzzle can be the same.\n
+    </string>
+    <string name="about_message">
+        This is about message
+    </string>
+    <string name="warn_too_much">Too much numbers!</string>
+    <string name="check_button">CHECK</string>
+    <string name="lives_remained">"Lives remained: "</string>
+    <string name="victory">VICTORY!</string>
+    <string name="fault">FAULT!</string>
+    <string name="input_err">Wrong input content for field</string>
+    <string name="error">Error</string>
+    <string name="congrats">Congratulations!</string>
+    <string name="warning_text">Everything will be lost. Are you sure?</string>
+    <string name="warning">Warning</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="complexity" />
+    <string name="language" />
+
+    <string-array name="level">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+    </string-array>
+
+    <string-array name="langs">
+        <item>Русский</item>
+        <item>English</item>
+    </string-array>
+
+</resources>

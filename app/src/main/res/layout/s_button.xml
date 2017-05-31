@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.example.sudoku.SButton
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/cell_color"
+    android:gravity="center"
+    android:includeFontPadding="false"
+    android:padding="0dp"
+    android:textAlignment="center"
+    android:textColor="@color/text_color" />

@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Судоку</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="start">Старт</string>
+    <string name="options">Опции</string>
+    <string name="help">Правила</string>
+    <string name="rules_message">
+        В судоку играют на квадратном поле 9 на 9 клеток. Само поле поделено на блоки (квадраты 3 на 3)\n
+        В начале игры известны некоторое число цифр в определенных клетках.\n
+        Цель судоку заполнить все пустые клетки с помощью цифр 1-9 (по одной цифре на клетку), по следующим правилам:\n
+        1. Цифра может появиться только один раз в каждой строчке\n
+        2. Цифра может появиться только один раз в каждом столбце\n
+        3. Цифра может появиться только один раз в каждом блоке\n
+    </string>
+    <string name="about_message">
+        Здесь располагается информация о разработчике
+    </string>
+
+    <string-array name="level">
+        <item>Легкий</item>
+        <item>Средний</item>
+        <item>Тяжелый</item>
+    </string-array>
+    <string name="about">Инфо</string>
+    <string name="check_button">ГОТОВО</string>
+    <string name="warn_too_much">Уже слишком много цифр!</string>
+    <string name="input_err">Неправильные входные данные поля</string>
+    <string name="lives_remained">"Осталось жизней: "</string>
+    <string name="fault">ПРОИГРЫШ!</string>
+    <string name="error">Ошибка</string>
+    <string name="victory">ПОБЕДА!</string>
+    <string name="congrats">Поздравляем!</string>
+    <string name="no">Нет</string>
+    <string name="yes">Да</string>
+    <string name="warning_text">Весь прогресс будет потерян. Вы уверены?</string>
+    <string name="warning">Предупреждение</string>
+
+    <string-array name="langs">
+        <item>Русский</item>
+        <item>English</item>
+    </string-array>
+    <string name="complexity">Сложность</string>
+    <string name="language">Язык</string>
+
+</resources>

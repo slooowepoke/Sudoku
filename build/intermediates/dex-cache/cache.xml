@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.1_47a64acbf514375954d6d41892154bb2c69176dd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="13d87c5a0cd2c899158432ca6f7b43f5dbcac0ae">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0cec5c3c5338aef58ee2ec2cc335d232c6d9de79\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_110b0371746bea5368dce68b082ccf09a51b7fae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_a66b8690f792b2e60d12d3181527e7c19a51822a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.1_4bd9563471d5e6c4ef1a9fde29728e2dbc2e6779\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_2cffedbbd1d7d96d3ad528cd948b45f3a93afeda\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.1_9595cf08f9613c0e45d51c458aa2ae07168a0afd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_8b848ec51aae07b6e8e41c5af1c2db5fb3baca04\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.1_cf28ce887ecb02e1a5102f6cf2e0145dd324075b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.1_da637e057340d4567f912cfddf72dbdd3bc02830\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_1cf3cfc4accd8330168db364304e4c2a4e3e7c54\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a1bad59f8ba05b0012a1421c23e179f0da4de16f">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_cc341f86d6d10d90d8d2c97c923202adb4d61762\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.1_16ebf1b451d1ea00b644ebd91118c26a0ba4fea6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.1_273266b144a9bfe5e4b8bcaae15ca657d822f909\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.1_9e4950091d6fa8e2fdea2cfe4a5a3ab6c0e376cb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.1_04d7036a957091f63f66fa7ed7c751a04dab81b0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.1_0d64728d5c42d5b22fae0657e2c986aaa98bce4f\classes.dex" />
+    </item>
+
+</items>
