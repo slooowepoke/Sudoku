@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="13d87c5a0cd2c899158432ca6f7b43f5dbcac0ae">
+        sha1="67cea2a681ff7993e668965fd4a3b2c972f8b6be">
         <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0cec5c3c5338aef58ee2ec2cc335d232c6d9de79\classes.dex" />
     </item>
     <item
@@ -106,7 +106,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="a1bad59f8ba05b0012a1421c23e179f0da4de16f">
+        sha1="063dce74556fefc8d52574f9ad90166c62df431b">
         <dex dex="C:\Users\natah\AndroidStudioProjects\Sudoku\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_cc341f86d6d10d90d8d2c97c923202adb4d61762\classes.dex" />
     </item>
     <item

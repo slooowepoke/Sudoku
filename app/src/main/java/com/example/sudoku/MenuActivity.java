@@ -17,6 +17,9 @@ import java.util.Locale;
 
 public class MenuActivity extends AppCompatActivity {
 
+    private final String ruLocale = "ru";
+    private final String enLocale = "en";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +66,7 @@ public class MenuActivity extends AppCompatActivity {
         final AlertDialog dialog = builder
                 .setView(R.layout.options_layout)
                 .setCancelable(true)
-                .setPositiveButton("OK", null)
+                .setPositiveButton(R.string.yes, null)
                 .create();
         dialog.setCanceledOnTouchOutside(false);
         dialog.show();
@@ -78,8 +81,7 @@ public class MenuActivity extends AppCompatActivity {
         }
 
         final int langIndex = (currLocale.contains("ru") ? 0 : 1);
-        final int complIndex = (MainActivity.complexity == MainActivity.COMPL.EASY ? 0 :
-                MainActivity.complexity == MainActivity.COMPL.MEDIUM ? 1 : 2);
+        final int complIndex = MainActivity.complexity.ordinal();
 
         Spinner langSpinner = (Spinner) dialog.findViewById(R.id.spinnerLanguage);
         Spinner complSpinner = (Spinner) dialog.findViewById(R.id.spinnerComplexity);
@@ -122,7 +124,7 @@ public class MenuActivity extends AppCompatActivity {
                 Spinner spinnerLang = (Spinner) dialog.findViewById(R.id.spinnerLanguage);
                 if (spinnerLang != null && spinnerLang.getSelectedItemPosition() != langIndex) {
 
-                    Locale newLocale = new Locale(langIndex == 0 ? "en" : "ru");
+                    Locale newLocale = new Locale(langIndex == 0 ? enLocale : ruLocale);
                     Configuration conf = new Configuration();
                     conf.setLocale(newLocale);
                     //noinspection deprecation
@@ -141,7 +143,7 @@ public class MenuActivity extends AppCompatActivity {
         AlertDialog dialog = builder.setMessage(text)
                 .setTitle(title)
                 .setCancelable(true)
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.cancel();

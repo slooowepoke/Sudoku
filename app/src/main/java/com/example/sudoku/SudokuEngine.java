@@ -10,31 +10,22 @@ import java.util.Vector;
 class SudokuEngine {
 
     private static final int dim = 9;
+    private static final int blockDim = 3;
+    private static final int fileAmount = 15;
+
+    private static final String filenamePostfix = ".txt";
+    private static final String emptyNumber = "0";
 
     static String[] readField(AssetManager assetManager,
                               MainActivity.COMPL complexity) throws IOException {
 
         String[] initialField = new String[dim*dim];
 
-        String compl = "e";
-        switch (complexity) {
-            case EASY: {
-                compl = "e";
-                break;
-            }
-            case MEDIUM: {
-                compl = "m";
-                break;
-            }
-            case HARD: {
-                compl = "h";
-                break;
-            }
-        }
+        String compl = complexity.getPrefix();
 
         Random rnd = new Random();
-        int var = rnd.nextInt(14) + 1;
-        String filename = compl + var + ".txt";
+        int var = rnd.nextInt(fileAmount - 1) + 1;
+        String filename = compl + var + filenamePostfix;
 
         //filename = "e1s.txt";  // solved variant, only for testing
 
@@ -57,12 +48,12 @@ class SudokuEngine {
                 String initialNum = initialField[i * dim + j];
                 String workingNum = workingField[i * dim + j];
 
-                if (!initialNum.equals("0")) {
-                    mergedField[i*dim + j] = initialNum;
+                if (!initialNum.equals(emptyNumber)) {
+                    mergedField[i * dim + j] = initialNum;
                 } else if (workingNum != null && !workingNum.equals("")) {
-                    mergedField[i*dim + j] = workingNum;
+                    mergedField[i * dim + j] = workingNum;
                 } else {
-                    mergedField[i*dim + j] = "";
+                    mergedField[i * dim + j] = "";
                 }
             }
         }
@@ -94,12 +85,12 @@ class SudokuEngine {
             // Blocks
 
             Vector<String> setOfNums = new Vector<>();
-            int row_ind = i / 3 * 3;
-            int col_ind = i * 3 - row_ind * 3;
+            int row_ind = i / blockDim * blockDim;
+            int col_ind = i * blockDim - row_ind * blockDim;
 
-            for (int j = row_ind; j < row_ind + 3; ++j) {
-                for (int k = col_ind; k < col_ind + 3; ++k) {
-                    String currNum = mergedField[j*dim + k];
+            for (int j = row_ind; j < row_ind + blockDim; ++j) {
+                for (int k = col_ind; k < col_ind + blockDim; ++k) {
+                    String currNum = mergedField[j * dim + k];
                     if (setOfNums.contains(currNum)) {
                         return false;
                     } else {

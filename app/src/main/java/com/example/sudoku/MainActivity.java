@@ -1,5 +1,6 @@
 package com.example.sudoku;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -26,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
     private String[] initialField;
     private String[] workingField;
 
+    @SuppressWarnings("FieldCanBeLocal")
+    private final String emptyNumber = "0";
+    @SuppressWarnings("FieldCanBeLocal")
+    private final int singleEraseOffset = 1, doubleEraseOffset = 2;
+
     private int faults = 0;
 
     private final int dim = 9;
@@ -34,8 +40,27 @@ public class MainActivity extends AppCompatActivity {
     private boolean isEditing = false;
 
     enum COMPL {
-        EASY, MEDIUM, HARD
+
+        EASY ("e", 3), MEDIUM ("m", 2), HARD ("h", 1);
+
+        private final String prefix;
+        private final int maxFaults;
+
+        COMPL(String prefix, int maxFaults) {
+            this.prefix = prefix;
+            this.maxFaults = maxFaults;
+        }
+
+        String getPrefix() {
+            return prefix;
+        }
+
+        int getMaxFaults() {
+            return maxFaults;
+        }
+
     }
+
 
     public static COMPL complexity = COMPL.EASY;
 
@@ -54,12 +79,12 @@ public class MainActivity extends AppCompatActivity {
             workingField = new String[dim * dim];
             readField();
         } else {
-            initialField = savedInstanceState.getStringArray("initialField");
-            workingField = savedInstanceState.getStringArray("workingField");
-            if (savedInstanceState.getBoolean("isActivated")) {
+            initialField = savedInstanceState.getStringArray(initialField.getClass().getName());
+            workingField = savedInstanceState.getStringArray(workingField.getClass().getName());
+            if (savedInstanceState.getBoolean(getString(R.string.is_activated))) {
                 activated = new Pair<>(
-                        savedInstanceState.getInt("activatedFirst"),
-                        savedInstanceState.getInt("activatedSecond"));
+                        savedInstanceState.getInt(getString(R.string.activated_first)),
+                        savedInstanceState.getInt(getString(R.string.activated_second)));
                 getAt(activated.first, activated.second).setState(SButton.State.ACTIVATED);
             }
         }
@@ -110,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             for (int j = 0; j < dim; ++j) {
+                @SuppressLint("InflateParams")
                 SButton btn = (SButton) inflater.inflate(R.layout.s_button, null);
                 btn.setCoords(i,j);
                 btn.setOnClickListener(listener);
@@ -126,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
             for (int j = 0; j < dim; ++j) {
                 String initialNum = initialField[i * dim + j];
                 String workingNum = workingField[i * dim + j];
-                if (initialNum != null && !initialNum.equals("0")) {
+                if (initialNum != null && !initialNum.equals(emptyNumber)) {
                     getAt(i, j).setText(initialNum);
                     getAt(i, j).setState(SButton.State.INITIAL);
                 } else if (workingNum != null && !workingNum.equals("")) {
@@ -142,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage(R.string.input_err)
-                    .setPositiveButton("OK", null)
+                    .setPositiveButton(R.string.yes, null)
                     .setTitle(R.string.error)
                     .create()
                     .show();
@@ -161,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
             faults++;
             title = getString(R.string.fault);
             text = getString(R.string.lives_remained) +
-                    (remained = (3 - faults));
+                    (remained = complexity.getMaxFaults() - faults);
         }
 
         final boolean lost = (remained == 0);
@@ -169,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         final AlertDialog dialog = builder.setMessage(text)
                 .setTitle(title)
-                .setPositiveButton("OK", null)
+                .setPositiveButton(R.string.yes, null)
                 .create();
         dialog.show();
         dialog.setCanceledOnTouchOutside(false);
@@ -268,7 +294,9 @@ public class MainActivity extends AppCompatActivity {
             CharSequence txt = btn.getText();
             int lght = txt.length();
             if (lght != 0) {
-                btn.setText(txt.subSequence(0, (lght > 1 ? lght - 2 : lght - 1)));
+                btn.setText(txt.subSequence(0, (lght > singleEraseOffset
+                        ? lght - doubleEraseOffset
+                        : lght - singleEraseOffset)));
             }
             if (btn.getText().length() == 0) {
                 activated = null;
@@ -303,13 +331,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putBoolean("isEditing", isEditing);
-        outState.putInt("faults", faults);
-        outState.putBoolean("isActivated", activated != null);
+        outState.putBoolean(getString(R.string.is_editing), isEditing);
+        outState.putInt(getString(R.string.faults), faults);
+        outState.putBoolean(getString(R.string.is_activated), activated != null);
 
         if (activated != null) {
-            outState.putInt("activatedFirst", activated.first);
-            outState.putInt("activatedSecond", activated.second);
+            outState.putInt(getString(R.string.activated_first), activated.first);
+            outState.putInt(getString(R.string.activated_second), activated.second);
         }
 
         for (int i = 0; i < dim; ++i) {
@@ -317,14 +345,14 @@ public class MainActivity extends AppCompatActivity {
                 workingField[i * dim + j] = getAt(i, j).getText().toString();
             }
         }
-        outState.putStringArray("workingField", workingField);
-        outState.putStringArray("initialField", initialField);
+        outState.putStringArray(workingField.getClass().getName(), workingField);
+        outState.putStringArray(initialField.getClass().getName(), initialField);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        isEditing = savedInstanceState.getBoolean("isEditing");
-        faults = savedInstanceState.getInt("faults");
+        isEditing = savedInstanceState.getBoolean(getString(R.string.is_editing));
+        faults = savedInstanceState.getInt(getString(R.string.faults));
     }
 }

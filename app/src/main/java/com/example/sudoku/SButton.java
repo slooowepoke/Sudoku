@@ -8,6 +8,9 @@ import android.util.TypedValue;
 import android.view.ViewGroup;
 import android.widget.TableRow;
 
+import java.util.Arrays;
+import java.util.List;
+
 // перегруженный класс кнопки
 class SButton extends android.support.v7.widget.AppCompatButton {
     private int row;
@@ -18,6 +21,16 @@ class SButton extends android.support.v7.widget.AppCompatButton {
     @SuppressWarnings("FieldCanBeLocal")
     private final int blockMargin = 5,
             normalMargin = 1;
+
+    @SuppressWarnings("FieldCanBeLocal")
+    private final int maxSymbolCount = 10;
+
+    @SuppressWarnings("FieldCanBeLocal")
+    private final
+    List<Integer> blockEdges = Arrays.asList(2, 5);
+
+    @SuppressWarnings("FieldCanBeLocal")
+    private final String numberSeparator = " ";
 
     enum State {
         NORMAL, ACTIVATED, EDITING, INITIAL
@@ -49,8 +62,8 @@ class SButton extends android.support.v7.widget.AppCompatButton {
                 new TableRow.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1f);
 
         params.setMargins(1, 1,
-                (col == 2 || col == 5 ? blockMargin : normalMargin),
-                (row == 2 || row == 5 ? blockMargin : normalMargin));
+                (blockEdges.contains(col) ? blockMargin : normalMargin),
+                (blockEdges.contains(row) ? blockMargin : normalMargin));
 
         setLayoutParams(params);
     }
@@ -74,19 +87,19 @@ class SButton extends android.support.v7.widget.AppCompatButton {
     // метод, вызываемый при добавлении цифр-вариантов
     public void appendNum(String text) throws Exception {
         String currText = getText().toString();
-        if (currText.contains(" " + text)) {
+        if (currText.contains(numberSeparator + text)) {
 
-            setText(currText.replace(" " + text, ""));
-        } else if (currText.contains(text + " ")) {
-            setText(currText.replace(text + " ", ""));
+            setText(currText.replace(numberSeparator + text, ""));
+        } else if (currText.contains(text + numberSeparator)) {
+            setText(currText.replace(text + numberSeparator, ""));
         } else if (currText.contains(text)) {
             setText(currText.replace(text, ""));
         } else {
             // если кнопка была пустой
             if (currText.length() == 0) {
                 setText(text);
-            } else if (currText.length() < 10) {
-                setText(currText + " " + text);
+            } else if (currText.length() < maxSymbolCount) {
+                setText(currText + numberSeparator + text);
             } else {
                 throw new Exception(getResources().getString(R.string.warn_too_much));
             }
